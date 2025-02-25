@@ -11,7 +11,7 @@ interface Product {
 const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
   return (
     <div className="bg-white shadow-lg rounded-lg p-4 w-64 text-center">
-      {/* Ensure all images are the same size */}
+      
       <Image src={product.image} alt={product.name} width={200} height={200} className="mx-auto" />
       <h2 className="text-lg font-semibold mt-2">{product.name}</h2>
       <p className="text-gray-600">${product.price}</p>
