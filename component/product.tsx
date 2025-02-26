@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaRegHeart, FaStar } from "react-icons/fa"; // Importing the outline heart and filled star from React Icons
+import { FaRegHeart, FaStar } from "react-icons/fa"; 
 
 interface Product {
   id: number;
@@ -10,7 +10,7 @@ interface Product {
 }
 
 const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
-  // Generate the filled stars based on the rating (rating out of 5)
+  
   const filledStars = Array.from({ length: 5 }, (_, index) => (
     <FaStar
       key={index}
@@ -36,11 +36,10 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
   />
 </div>
 
-
       {/* Name and Price in One Line with Increased Font Size and Spacing */}
       <div className="flex justify-between items-start mt-6 text-lg md:text-xl">
         <h2 className="font-semibold text-gray-800 leading-tight truncate">{product.name}</h2>
-        <p className="text-gray-800 font-bold ml-8 text-lg">LKR {product.price.toFixed(2)}</p> {/* Added ml-8 for spacing */}
+        <p className="text-gray-800 font-bold ml-8 text-lg">LKR {product.price.toFixed(2)}</p> 
       </div>
 
       {/* Green-Filled Stars */}
