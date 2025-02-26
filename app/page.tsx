@@ -1,4 +1,4 @@
-import ProductCard from "@/component/product";
+import ProductCard from "../component/product";
 
 const products = [
   { id: 1, name: "Instax Mini 11", price: 22500.00, rating: 5, image: "/images/headset.jpg" },

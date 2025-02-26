@@ -19,7 +19,7 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
   ));
 
   return (
-    <div className="relative bg-white shadow-lg rounded-lg p-4 text-center border-2 border-gray-400 w-full sm:w-72 md:w-80 lg:w-96 mx-auto transition-transform hover:scale-105 duration-300 h-72 md:h-80 lg:h-96 mb-4">
+    <div className="relative bg-white shadow-lg rounded-lg p-6 text-center border-2 border-black w-full h-[450px] mx-auto transition-transform hover:scale-105 duration-300 mb-4">
       {/* Outline Heart Icon (Moved to Top Left) */}
       <div className="absolute top-2 left-2 bg-gray-200 rounded-full p-1 shadow cursor-pointer hover:scale-110 transition">
         <FaRegHeart className="w-6 h-6 text-red-500" />
@@ -32,24 +32,24 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
           alt={product.name}
           width={200}
           height={200}
-          className="w-full h-auto object-cover rounded-lg"
+          className="w-full h-full object-cover rounded-lg"
         />
       </div>
 
-      {/* Name and Price in One Line with Increased Space Between */}
-      <div className="flex justify-between items-center mt-3 text-base md:text-lg">
-        <h2 className="font-semibold truncate">{product.name}</h2>
-        <p className="text-gray-800 font-bold ml-16">LKR {product.price.toFixed(2)}</p> {/* Increased space with ml-16 */}
+      {/* Name and Price in One Line with Increased Font Size and Spacing */}
+      <div className="flex justify-between items-start mt-6 text-lg md:text-xl">
+        <h2 className="font-semibold text-gray-800 leading-tight truncate">{product.name}</h2>
+        <p className="text-gray-800 font-bold ml-8 text-lg">LKR {product.price.toFixed(2)}</p> {/* Added ml-8 for spacing */}
       </div>
 
       {/* Green-Filled Stars */}
-      <div className="flex space-x-1 mt-1">
+      <div className="flex space-x-1 mt-2">
         {filledStars} {/* Display Filled Green Stars */}
       </div>
 
-      {/* Add to Cart Button (Rounded Corners) */}
-      <button className="mt-3 border-2 border-green-700 text-green-700 py-2 px-5 rounded-lg hover:bg-green-700 hover:text-white transition duration-300 text-sm md:text-base">
-        Add to cart
+      {/* Add to Cart Button (Longer with Rounded Corners) */}
+      <button className="mt-6 bg-green-700 text-white py-3 px-8 rounded-3xl hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 transition duration-300 text-sm md:text-base">
+        Add to Cart
       </button>
     </div>
   );
