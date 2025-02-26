@@ -19,22 +19,23 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
   ));
 
   return (
-    <div className="relative bg-white shadow-lg rounded-lg p-6 text-center border-2 border-black w-full h-[450px] mx-auto transition-transform hover:scale-105 duration-300 mb-4">
+    <div className="relative bg-white shadow-lg rounded-lg p-6 text-center  w-full h-[500px] mx-auto transition-transform hover:scale-105 duration-300 mb-4">
       {/* Outline Heart Icon (Moved to Top Left) */}
       <div className="absolute top-2 left-2 bg-gray-200 rounded-full p-1 shadow cursor-pointer hover:scale-110 transition">
         <FaRegHeart className="w-6 h-6 text-red-500" />
       </div>
 
       {/* Image Section */}
-      <div className="p-4 h-2/3 flex items-center justify-center">
-        <Image
-          src={product.image}
-          alt={product.name}
-          width={200}
-          height={200}
-          className="w-full h-full object-cover rounded-lg"
-        />
-      </div>
+<div className="p-4 h-2/3 flex items-center justify-center">
+  <Image
+    src={product.image}
+    alt={product.name}
+    width={200}
+    height={200}
+    className="w-full h-full object-contain rounded-lg"
+  />
+</div>
+
 
       {/* Name and Price in One Line with Increased Font Size and Spacing */}
       <div className="flex justify-between items-start mt-6 text-lg md:text-xl">
@@ -48,9 +49,10 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
       </div>
 
       {/* Add to Cart Button (Longer with Rounded Corners) */}
-      <button className="mt-6 bg-green-700 text-white py-3 px-8 rounded-3xl hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 transition duration-300 text-sm md:text-base">
-        Add to Cart
-      </button>
+<button className="mt-6 border-2 border-green-700 text-green-700 bg-white py-3 px-8 rounded-3xl hover:bg-green-700 hover:text-white focus:outline-none focus:ring-4 focus:ring-green-300 transition duration-300 text-sm md:text-base">
+  Add to Cart
+</button>
+
     </div>
   );
 };
